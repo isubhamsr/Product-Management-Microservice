@@ -7,7 +7,7 @@ namespace Product_Management_Microservice.Services
         List<AppProduct> GetAllProducts();
         bool SaveProduct(AppProduct product);
         bool DeleteProduct(int id);
-        bool UpdateProduct(int id, AppProduct product);
+        bool UpdateProduct(AppProduct product);
         List<AppProduct> GetProductById(int id);
     }
 }

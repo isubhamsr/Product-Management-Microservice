@@ -137,12 +137,12 @@ namespace Product_Management_Microservice.Controllers
         }
 
         // PUT api/<ProductController>/5
-        [HttpPut("{id}")]
-        public string Put(int id, [FromBody] AppProduct value)
+        [HttpPut]
+        public string Put([FromBody] AppProduct value)
         {
             try
             {
-                var data = _product.UpdateProduct(id, value);
+                var data = _product.UpdateProduct(value);
                 if (data)
                 {
                     response.Add("error", false);

@@ -86,11 +86,11 @@ namespace Product_Management_Microservice.Services
             }
         }
 
-        public bool UpdateProduct(int id, AppProduct productModel)
+        public bool UpdateProduct(AppProduct productModel)
         {
             try
             {
-                var product = _context.AppProducts.Where(p => p.Id == id).FirstOrDefault();
+                var product = _context.AppProducts.Where(p => p.Id == productModel.Id).FirstOrDefault();
                 if(product != null)
                 {
                     product.Name = productModel.Name;
