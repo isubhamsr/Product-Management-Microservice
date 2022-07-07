@@ -2,11 +2,13 @@
 using Newtonsoft.Json;
 using Product_Management_Microservice.Services;
 using Product_Management_Microservice.Model;
+using Microsoft.AspNetCore.Authorization;
 
 // For more information on enabling Web API for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
 
 namespace Product_Management_Microservice.Controllers
 {
+    [Authorize]
     [Route("api/[controller]")]
     [ApiController]
     public class ProductController : ControllerBase
